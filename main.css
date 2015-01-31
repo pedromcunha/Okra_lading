@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	height: 645px;
+	height: 100vh;
 	width: 100vw;
 	color: #595959;
 	margin: 0px;
@@ -23,8 +23,7 @@ h1 {
 }
 
 #sectionOne {
-	padding: 100px 0px;
-	height: 70%;
+	height: 100%;
 	background-color: #000000;
 }
 
@@ -34,7 +33,6 @@ h1 {
 
 .bg-right, .bg-left {
 	height: 60%;
-	opacity: .8;
 }
 
 .bg-right {
