@@ -97,6 +97,6 @@ h2 {
 	height: 50px;
 	border-radius: 50%;
 	background-color: transparent;
-	position: relative;
-	top: 30%;
+	position: absolute;
+	top: 80%;
 }
