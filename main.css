@@ -87,12 +87,12 @@ h2 {
 }
 
 .next-btn .fa-angle-down {
-	color: white;
 	font-size: 38px;
 }
 
 .next-btn {
-	border: 1px solid white;
+	border: 1px solid #ffffff;
+	color: #ffffff;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -100,7 +100,15 @@ h2 {
 	position: absolute;
 	top: 80%;
 	left: 48%;
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
 }
+
+/*Media Queries*/
+
 @media (min-width: 1015px) {
 	.mac-okra {
 		width: 700px;
@@ -119,5 +127,61 @@ h2 {
 	.mac-okra {
 		width: 100%;
 		margin-bottom: 10px;
+	}
+}
+
+/*Animations*/
+@-webkit-keyframes glow {
+    0% {
+		color: #99b742;
+		border-color: #99b742;
+    }	
+    100% {
+		color: #ffffff;
+		border-color: #ffffff;
+	}
+}
+
+@-moz-keyframes glow {
+    0% {
+		color: #99b742;
+		border-color: #99b742;
+    }	
+    100% {
+		color: #ffffff;
+		border-color: #ffffff;
+	}
+}
+
+@-o-keyframes glow {
+    0% {
+		color: #99b742;
+		border-color: #99b742;
+    }	
+    100% {
+		color: #ffffff;
+		border-color: #ffffff;
+	}
+}
+
+@-ms-keyframes glow {
+    0% {
+		color: #99b742;
+		border-color: #99b742;
+    }	
+    100% {
+		color: #ffffff;
+		border-color: #ffffff;
+	}
+}
+
+@keyframes glow {
+    0% {
+		color: #99b742;
+		border-color: #99b742;
+    }	
+    100% {
+		color: #ffffff;
+		border-color: #ffffff;
 	}
 }
