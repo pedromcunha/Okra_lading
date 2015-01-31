@@ -15,11 +15,11 @@ h1 {
 }
 
 h2 {
-	font-weight: 700;	
+	font-weight: 400;	
 }
 
 .blurb {
-	width: 800px;
+	width: 90%;
 	margin: 0 auto;
 }
 #sectionOne, #sectionTwo {
@@ -100,4 +100,24 @@ h2 {
 	position: absolute;
 	top: 80%;
 	left: 48%;
+}
+@media (min-width: 1015px) {
+	.mac-okra {
+		width: 700px;
+	}
+}
+
+@media (min-width: 550px) and (max-width: 890px) {
+	.mac-okra {
+		width: 80%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.mac-okra {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
