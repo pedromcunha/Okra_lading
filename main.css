@@ -28,6 +28,8 @@ h2 {
 	height: 100%;
 	min-height: 650px;
 	text-align: center;
+	position: relative;
+	z-index: 100;
 }
 
 #sectionOne {
@@ -105,6 +107,38 @@ h2 {
 	-o-animation: glow 800ms ease-out infinite alternate;
 	-ms-animation: glow 800ms ease-out infinite alternate;
 	animation: glow 800ms ease-out infinite alternate;
+}
+
+.modal-backdrop {
+	z-index: 10000;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.modal-body {
+	width: 45%;
+	height: 60%;
+	background-color: #ffffff;
+	margin: 0 auto;
+	position: relative;
+	top: 15%;
+	color: #000000;
+	padding: 10px;
+}
+
+.modal-header {
+	color: #595959;
+	font-size: 20px;
+	text-align: center;
+}
+
+.modal-header .fa-close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
 }
 
 /*Media Queries*/
