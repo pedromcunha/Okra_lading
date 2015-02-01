@@ -20,10 +20,24 @@ h3 {
 	font-weight: 400;
 }
 
+li {
+	font-size: 1.5vw;
+	font-weight: 400;
+	text-align: left;
+	line-height: 2.1vw;
+}
+
 #slogan {
 	width:60%;
 	margin: auto auto;
 	padding: 3%;
+}
+
+#wait {
+	width:60%;
+	margin: auto auto;
+	padding-top: 4%;
+	padding-bottom: 2%;
 }
 
 h2 {
@@ -33,10 +47,17 @@ h2 {
 	padding: 3%;
 }
 
+ol {
+	width: 45%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
 .blurb {
 	width: 70%;
 	margin: 0 auto;
 	line-height: 1.5em;
+	padding-bottom: 30px;
 }
 #sectionOne, #sectionTwo, #sectionThree {
 	margin: 0 auto;
@@ -73,9 +94,21 @@ h2 {
 	z-index: 100;
 }
 
-#sectionTwo h2:first-child {
-	padding-top: 20px;
-	margin-top: 0px;
+#footer {
+	background-color: #474746;
+	margin: 0 auto;
+	width: 100%;
+	height: 7%;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 18px;
+	font-size: 15px;
+	color: #939392;
 }
 
 
