@@ -6,13 +6,25 @@
 	});
 
 	$('.signup-btn').on('click', function() {
-		$('.modal-backdrop').fadeIn('slow');
+		$('.modal-body').slideDown('fast');
+		$('.modal-body').animate({
+			top: '15%'
+		}, 500);
+		$('.modal-backdrop').fadeIn('fast');
 		$('body').addClass('no-scroll');
 	});
 
 	$('.close-modal, .modal-backdrop').on('click', function() {
-		$('.modal-backdrop').fadeOut('slow');
+		$('.modal-body').animate({
+			top: '0'
+		}, 500);
+		$('.modal-body').slideUp('fast');
+		$('.modal-backdrop').fadeOut('fast');
 		$('body').removeClass('no-scroll');
+	});
+
+	$('.modal-body').on('click', function(event) {
+		console.log('clicked');
 	});
 
 })();

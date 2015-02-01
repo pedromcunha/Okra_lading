@@ -113,14 +113,19 @@ h2 {
 }
 
 .modal-body {
-	width: 45%;
+	width: 40%;
 	height: 60%;
 	background-color: #ffffff;
 	margin: 0 auto;
-	position: relative;
-	top: 15%;
+	position: fixed;
 	color: #000000;
 	padding: 10px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: none;
 }
 
 .modal-header {
