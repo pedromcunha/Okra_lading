@@ -64,13 +64,6 @@ h2 {
 	width: 700px;
 }
 
-.btn-reset {
-	outline: 0;
-	padding: 0;
-	border: 0;
-	cursor: pointer;
-}
-
 .action-bar {
 	width: 300px;
 	margin: 0 auto;
@@ -85,7 +78,12 @@ h2 {
 	width: 300px;
 	font-size: 24px;
 	font-weight: 300;
-	border: 1px solid #ffffff;
+	border: 1px solid !important;
+	-webkit-animation: glow 800ms ease-out infinite alternate;
+	-moz-animation: glow 800ms ease-out infinite alternate;
+	-o-animation: glow 800ms ease-out infinite alternate;
+	-ms-animation: glow 800ms ease-out infinite alternate;
+	animation: glow 800ms ease-out infinite alternate;
 }
 
 .next-btn .fa-angle-down {
@@ -93,7 +91,7 @@ h2 {
 }
 
 .next-btn {
-	border: 1px solid #ffffff;
+	border: 1px solid #ffffff !important;
 	color: #ffffff;
 	width: 50px;
 	height: 50px;
@@ -102,11 +100,6 @@ h2 {
 	position: absolute;
 	top: 80%;
 	left: 48%;
-	-webkit-animation: glow 800ms ease-out infinite alternate;
-	-moz-animation: glow 800ms ease-out infinite alternate;
-	-o-animation: glow 800ms ease-out infinite alternate;
-	-ms-animation: glow 800ms ease-out infinite alternate;
-	animation: glow 800ms ease-out infinite alternate;
 }
 
 .modal-backdrop {
@@ -116,6 +109,7 @@ h2 {
 	background: rgba(0,0,0,.6);
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
+	display: none;
 }
 
 .modal-body {
@@ -139,6 +133,19 @@ h2 {
 	position: absolute;
 	top: 5px;
 	right: 10px;
+	font-size: 15px;
+}
+
+/* Utility */
+.no-scroll {
+	overflow: hidden;
+}
+
+.btn-reset {
+	outline: 0;
+	padding: 0;
+	border: 0;
+	cursor: pointer;
 }
 
 /*Media Queries*/
@@ -168,54 +175,44 @@ h2 {
 @-webkit-keyframes glow {
     0% {
 		color: #99b742;
-		border-color: #99b742;
     }	
     100% {
 		color: #ffffff;
-		border-color: #ffffff;
 	}
 }
 
 @-moz-keyframes glow {
     0% {
 		color: #99b742;
-		border-color: #99b742;
     }	
     100% {
 		color: #ffffff;
-		border-color: #ffffff;
 	}
 }
 
 @-o-keyframes glow {
     0% {
 		color: #99b742;
-		border-color: #99b742;
     }	
     100% {
 		color: #ffffff;
-		border-color: #ffffff;
 	}
 }
 
 @-ms-keyframes glow {
     0% {
 		color: #99b742;
-		border-color: #99b742;
     }	
     100% {
 		color: #ffffff;
-		border-color: #ffffff;
 	}
 }
 
 @keyframes glow {
     0% {
 		color: #99b742;
-		border-color: #99b742;
     }	
     100% {
 		color: #ffffff;
-		border-color: #ffffff;
 	}
 }
