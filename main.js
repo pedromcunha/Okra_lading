@@ -23,8 +23,7 @@
 		$('body').removeClass('no-scroll');
 	});
 
-	$('.modal-body').on('click', function(event) {
-		console.log('clicked');
+	$(document).on('scroll', function() {
+		console.log($(window).scrollTop());
 	});
-
 })();
