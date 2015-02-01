@@ -53,6 +53,13 @@ ol {
 	padding-bottom: 10px;
 }
 
+.nodeObj, .nodeKr, .nodeTask, .nodeTree {
+	width: 200px;
+	display: block;
+	position: absolute;
+	left: 2000px;
+}
+
 .blurb {
 	width: 70%;
 	margin: 0 auto;
@@ -67,6 +74,7 @@ ol {
 	text-align: center;
 	position: relative;
 	z-index: 100;
+	overflow: hidden;
 }
 
 #sectionOne {
@@ -162,7 +170,7 @@ ol {
 	border-radius: 50%;
 	background-color: transparent;
 	position: absolute;
-	top: 80%;
+	top: 88%;
 	left: 48%;
 }
 
@@ -286,6 +294,17 @@ ol {
 	.mac-okra {
 		width: 90%;
 		margin-bottom: 10px;
+	}
+	ol {
+		width: 100%;
+	}
+
+	ol li {
+		line-height: normal;
+		font-size: 24px;
+	}
+	h3 {
+		font-size: inherit;
 	}
 }
 
