@@ -306,6 +306,10 @@ ol {
 	h3 {
 		font-size: inherit;
 	}
+
+	h1 {
+		font-size: 42px;
+	}
 }
 
 /*Animations*/
