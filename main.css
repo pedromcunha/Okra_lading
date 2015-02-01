@@ -144,14 +144,21 @@ h2 {
 }
 
 .modal-body {
-	width: 45%;
-	height: 60%;
+	width: 40%;
+	height: 275px;
 	background-color: #ffffff;
 	margin: 0 auto;
-	position: relative;
-	top: 15%;
+	position: fixed;
 	color: #000000;
 	padding: 10px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: none;
+	max-width: 500px;
+	min-width: 300px;
 }
 
 .modal-header {
@@ -165,6 +172,47 @@ h2 {
 	top: 5px;
 	right: 10px;
 	font-size: 15px;
+}
+
+.mce-label {
+	margin-right: 15px;
+}
+
+#mce-EMAIL {
+	width: 200px;
+	border: 1px solid #e7e7e7;
+	padding: 5px;
+}
+
+#mc_embed_signup_scroll {
+	margin: 0 auto;
+	display: block;
+	padding-top: 50px;
+	width: 80%;
+	text-align: center;
+}
+
+#mc-embedded-subscribe {
+	border: 1px solid #99b742;
+	padding: 5px 10px;
+	font-size: 14px;
+	background: transparent;
+	color: #99b742;
+	font-weight: 700;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#mc-embedded-subscribe:hover {
+	color: #ffffff;
+	background-color: #99b742;
+}
+
+.clear {
+	margin-top: 80px;
+	text-align: center;
 }
 
 /* Utility */
@@ -195,9 +243,15 @@ h2 {
 	}
 }
 
+@media (max-width: 850px) {
+	#mce-EMAIL {
+		margin-top: 15px;
+	}
+}
+
 @media (max-width: 550px) {
 	.mac-okra {
-		width: 100%;
+		width: 90%;
 		margin-bottom: 10px;
 	}
 }
