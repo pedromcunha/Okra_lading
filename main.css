@@ -16,8 +16,8 @@ h1 {
 }
 
 h3 {
-	font-size: 1.7vw;
-	font-weight: 400;
+	font-size: 1.3vw;
+	font-weight: 200;
 }
 
 li {
@@ -68,10 +68,11 @@ ul img {
 }
 
 .blurb {
-	width: 70%;
+	width: 60%;
 	margin: 0 auto;
 	line-height: 1.5em;
 	padding-bottom: 30px;
+	text-align: left;
 }
 #sectionOne, #sectionTwo, #sectionThree {
 	margin: 0 auto;
