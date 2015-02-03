@@ -51,16 +51,21 @@
 		if($(window).scrollTop() > 1300 && nodeAnimated === false) {
 			setTimeout(function() {
 				$('.nodeTree').center();
+				$('#list1').center();
 			}, 1000);
 			setTimeout(function() {
-				$('.nodeObj').center();
-			}, 1500);
-			setTimeout(function() {
-				$('.nodeKr').center();
+				$('#row1').center();
+				$('#list2').center();
 			}, 2000);
 			setTimeout(function() {
-				$('.nodeTask').center();
-			}, 2500);		      
+				$('#row2').center();
+				$('#list3').center();
+			}, 3000);
+			setTimeout(function() {
+				$('#row3').center();
+				$('#list4').center();
+				$('#list5').center();
+			}, 4000);		      
 			nodeAnimated = true;
 		}
 	});

@@ -60,11 +60,43 @@ ul img {
 	vertical-align: middle;
 }
 
-.nodeObj, .nodeKr, .nodeTask, .nodeTree {
-	width: 200px;
-	display: block;
+.node, .node-inactive {
+	width: 155px;
+	height: 59px;
+	display: inline-block;
+	background-color: #99b742;
+	border-radius: 5px;
+	margin-right: 10px;
+	line-height: 60px;
+}
+
+.node-inactive {
+	background-color: #c2c5c3;
+}
+
+.row {
+	padding: 17px;
+	left: 2000px;
+	position: absolute; 
+}
+
+.row img {
+	width: 450px;
+}
+
+.nodeTree {
+	width: 500px;
+	height: 275px;
+	border: 1px solid #99b742;
+	margin: 0 auto;
+	padding-top: 20px;
 	position: absolute;
 	left: 2000px;
+}
+
+.instructional li {
+	left: 2000px;
+	position: absolute;
 }
 
 .blurb {
