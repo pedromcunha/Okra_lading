@@ -226,12 +226,12 @@ ul img {
 #promise {
     font-size: 25px;
     font-weight: 400;
-    margin: 0;
+    text-align: center;
     padding-top: 20px;
 }
 #mc_embed_signup input:focus {
     border: 2px solid #99b742;
-	outline: none;
+    outline: none;
 }
 #mc_embed_signup input.email {
     display: block;
@@ -263,22 +263,22 @@ ul img {
     text-align: center;
 }
 #errorMsg {
-	position: absolute;
-	width:100%;
-	text-align: center;
-	display: none;
-	color: #E41E1E;
-	font-weight: 700;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: none;
+    color: #E41E1E;
+    font-weight: 700;
 }
 #successMsg {
-	position: absolute;
-	padding-top: 10px;
-	width:100%;
-	text-align: center;
-	margin: 0 auto;
-	display: none;
-	color: #99b742;
-	font-weight: 700;
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: none;
+    color: #99b742;
+    font-weight: 700;
 }
 #canvas-path {
     width: 100%;
@@ -332,6 +332,10 @@ ul img {
     h1 {
         font-size: 42px;
     }
+    .clear {
+        margin-top: 20px;
+        text-align: center;
+    }
 }
 /* iPhone */
 
@@ -371,6 +375,10 @@ ul img {
     h2 {
         font-size: 1em;
         font-weight: bold;
+    }
+    .clear {
+        margin-top: 40px;
+        text-align: center;
     }
 }
 /*Animations*/
