@@ -8,7 +8,6 @@
         $('.modal-body').slideUp('fast');
         $('.modal-backdrop').fadeOut('fast');
         $('body').removeClass('no-scroll');
-        $('#successMsg').toggle();
         $('#mce-EMAIL').val("");
     }
 
@@ -25,6 +24,7 @@
         }, 500);
         $('.modal-backdrop').fadeIn('fast');
         $('body').addClass('no-scroll');
+        $("#mce-EMAIL").focus();
     });
 
     $('.close-modal, .modal-backdrop').on('click', closeModal);
@@ -67,6 +67,9 @@
             setTimeout(function() {
                 closeModal();
             }, 700);
+            setTimeout(function() {
+                $('#successMsg').toggle();
+            }, 900);
         }
 
         function callback(data) {
