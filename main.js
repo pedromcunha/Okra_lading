@@ -1,72 +1,121 @@
 (function(jQuery) {
-	var nodeAnimated = false;
+    var nodeAnimated = false;
 
-	function closeModal() {
-		$('.modal-body').animate({
-			top: '0'
-		}, 500);
-		$('.modal-body').slideUp('fast');
-		$('.modal-backdrop').fadeOut('fast');
-		$('body').removeClass('no-scroll');
-	}
+    function closeModal() {
+        $('.modal-body').animate({
+            top: '0'
+        }, 500);
+        $('.modal-body').slideUp('fast');
+        $('.modal-backdrop').fadeOut('fast');
+        $('body').removeClass('no-scroll');
+        $('#successMsg').toggle();
+        $('#mce-EMAIL').val("");
+    }
 
-	$('.next-btn').on('click', function() {
-		$('html, body').animate({
-	        scrollTop: $('#sectionTwo').offset().top
-	    }, 1000);
-	});
+    $('.next-btn').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $('#sectionTwo').offset().top
+        }, 1000);
+    });
 
-	$('.signup-btn').on('click', function() {
-		$('.modal-body').slideDown('fast');
-		$('.modal-body').animate({
-			top: '15%'
-		}, 500);
-		$('.modal-backdrop').fadeIn('fast');
-		$('body').addClass('no-scroll');
-	});
+    $('.signup-btn').on('click', function() {
+        $('.modal-body').slideDown('fast');
+        $('.modal-body').animate({
+            top: '15%'
+        }, 500);
+        $('.modal-backdrop').fadeIn('fast');
+        $('body').addClass('no-scroll');
+    });
 
-	$('.close-modal, .modal-backdrop').on('click', closeModal);
+    $('.close-modal, .modal-backdrop').on('click', closeModal);
 
-	$.fn.center = function () {
-	    var left = ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px";
-	    this.animate({left: left}, function(){
-	        $(this).css({position: 'static', margin: '0 auto'});
-	    });
-	    return this;
-	}
+    $.fn.center = function() {
+        var left = ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px";
+        this.animate({
+            left: left
+        }, function() {
+            $(this).css({
+                position: 'static',
+                margin: '0 auto'
+            });
+        });
+        return this;
+    }
 
-	function validateEmail (email) {
-		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	    return re.test(email);
-	}
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
 
-	$('#mc-embedded-subscribe').on('click', function() {
-		var x = document.forms["mc-embedded-subscribe-form"]["EMAIL"].value;
-	    if (x.length !== 0 && validateEmail(x)) {
-	        closeModal();
-	    }
-	});
 
-	$(document).on('scroll', function() {
-		if($(window).scrollTop() > 1300 && nodeAnimated === false) {
-			setTimeout(function() {
-				$('.nodeTree').center();
-				$('#list1').center();
-			}, 1000);
-			setTimeout(function() {
-				$('#row1').center();
-				$('#list2').center();
-			}, 2000);
-			setTimeout(function() {
-				$('#row2').center();
-				$('#list3').center();
-			}, 3000);
-			setTimeout(function() {
-				$('#row3').center();
-				$('#list4').center();
-				$('#list5').center();
-			}, 4000);		      
-			nodeAnimated = true;
-		}
-	});
+    $('#mc-embedded-subscribe').on('click', function() {
+        function showError(msg) {
+            $('#mce-EMAIL').css("border", "2px solid #E41E1E");
+            $('#mce-EMAIL').css("outline", "none");
+            $('#errorMsg').css("display", "block");
+            $('#errorMsg').html(msg);
+            setTimeout(function() {
+            	$('#errorMsg').fadeOut();
+            	$('#mce-EMAIL').css("border", "2px inset");
+                $('#mce-EMAIL').val("");
+            }, 1550);
+        }
+
+        function showSuccess(msg) {
+            $('#successMsg').css("display", "block");
+            $('#successMsg').html(msg);
+            setTimeout(function() {
+                closeModal();
+            }, 700);
+        }
+
+        function callback(data) {
+            if (data.status === 200) {
+                showSuccess(data.msg);
+            } else {
+                showError(data.msg)
+            }
+        }
+
+        var email = $("#mce-EMAIL").val();
+
+        if (validateEmail(email)) {
+            var payload = {
+                "email": email
+            };
+            $.ajax({
+                type: "POST",
+                url: "https://immense-eyrie-7172.herokuapp.com/signup",
+                data: JSON.stringify(payload),
+                success: callback,
+                dataType: "json",
+                contentType: "application/json"
+            });
+        } else {
+            showError("Please enter a valid email address!");
+        }
+    });
+
+    $(document).on('scroll', function() {
+        if ($(window).scrollTop() > 1300 && nodeAnimated === false) {
+            setTimeout(function() {
+                $('.nodeTree').center();
+                $('#list1').center();
+            }, 1000);
+            setTimeout(function() {
+                $('#row1').center();
+                $('#list2').center();
+            }, 2000);
+            setTimeout(function() {
+                $('#row2').center();
+                $('#list3').center();
+            }, 3000);
+            setTimeout(function() {
+                $('#row3').center();
+                $('#list4').center();
+                $('#list5').center();
+            }, 4000);
+            nodeAnimated = true;
+        }
+    });
 })();
