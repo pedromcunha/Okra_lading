@@ -296,6 +296,11 @@ ul img {
 	text-align: center;
 }
 
+#canvas-path {
+	width: 100%;
+	height: 100%;
+}
+
 /* Utility */
 .no-scroll {
 	overflow: hidden;
@@ -349,6 +354,53 @@ ul img {
 
 	h1 {
 		font-size: 42px;
+	}
+}
+/* iPhone */
+@media (max-width: 400px) {
+	.nodeTree {
+		width: 98%;
+	}
+	.instructional {
+		width: 90%;
+	}
+	.instructional li {
+		line-height: 46px;
+		font-size: 20px;
+		position: static;
+	}
+
+	.instructional li img {
+		width: 18px;
+	}
+
+	#row3 img {
+		width: 300px;
+	}
+
+	.blurb {
+		width: 95%;
+	}
+
+	#slogan {
+		font-size: 30px;
+	}
+
+	#sectionOne, #sectionTwo, #sectionThree {
+		min-height: inherit;
+	}
+
+	.next-btn {
+		left: 43%;
+	}
+
+	.action-bar {
+		padding-top: 15px;
+	}
+
+	h2 {
+		font-size: 1em;
+		font-weight: bold;
 	}
 }
 

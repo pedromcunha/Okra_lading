@@ -1,17 +1,27 @@
-var canvas = document.getElementById("okraPath");
-var ctx = canvas.getContext("2d");
+var $canvas = $('#canvas-path');
+var ctx = $canvas[0].getContext('2d');
+var height = $canvas[0].height;
+var width = $canvas[0].width;
 
-ctx.beginPath();
-ctx.moveTo(150, 20);
-ctx.arcTo(150,100,50,20,30);
-ctx.stroke();
+// Draw a sine wave on a canvas
+$canvas.tween(function(now, fx) {
+    var t = fx.pos; // current time
+    var p = $.curve.sine(t, {
+        x: 0,
+        y: height / 2,
+        amp: height / 2,
+        wavelength: width
+    });
+    var x = p[0];
+    var y = p[1];
 
-ctx.fillStyle = 'blue';
-// base point
-ctx.fillRect(150, 20, 10, 10);
+    // start the path
+    if (fx.pos === 0) {
+        ctx.moveTo(x, y);
+        ctx.beginPath();
+    }
 
-ctx.fillStyle = 'red';
-// control point one
-ctx.fillRect(150, 100, 10, 10);
-// control point two
-ctx.fillRect(50, 20, 10, 10);
+    // draw a line
+    ctx.lineTo(x, y);
+    ctx.stroke();
+}, 3000);
