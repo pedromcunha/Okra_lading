@@ -383,7 +383,7 @@ ul img {
 	}
 
 	#slogan {
-		font-size: 18px;
+		font-size: 30px;
 	}
 
 	#sectionOne, #sectionTwo, #sectionThree {
@@ -391,7 +391,7 @@ ul img {
 	}
 
 	.next-btn {
-		left: 43%;
+		display: none;
 	}
 
 	.action-bar {
