@@ -24,6 +24,8 @@
         $('.modal-body').slideUp('fast');
         $('.modal-backdrop').fadeOut('fast');
         $('body').removeClass('no-scroll');
+
+        $('#mce-EMAIL').val("");
     }
 
     $('.next-btn').on('click', function() {
@@ -39,6 +41,8 @@
         }, 500);
         $('.modal-backdrop').fadeIn('fast');
         $('body').addClass('no-scroll');
+
+        $("#mce-EMAIL").focus();
     });
 
     $('.close-modal, .modal-backdrop').on('click', closeModal);
@@ -62,9 +66,53 @@
     }
 
     $('#mc-embedded-subscribe').on('click', function() {
-        var x = document.forms["mc-embedded-subscribe-form"]["EMAIL"].value;
-        if (x.length !== 0 && validateEmail(x)) {
-            closeModal();
+        function showError(msg) {
+            $('#mce-EMAIL').css("border", "2px solid #E41E1E");
+            $('#mce-EMAIL').css("outline", "none");
+            $('#errorMsg').css("display", "block");
+            $('#errorMsg').html(msg);
+            setTimeout(function() {
+            	$('#errorMsg').fadeOut();
+            	$('#mce-EMAIL').css("border", "2px inset");
+                $('#mce-EMAIL').val("");
+            }, 1550);
+        }
+
+        function showSuccess(msg) {
+            $('#successMsg').css("display", "block");
+            $('#successMsg').html(msg);
+            setTimeout(function() {
+                closeModal();
+            }, 700);
+            setTimeout(function() {
+                $('#successMsg').toggle();
+            }, 900);
+        }
+
+        function callback(data) {
+            if (data.status === 200) {
+                showSuccess(data.msg);
+            } else {
+                showError(data.msg)
+            }
+        }
+
+        var email = $("#mce-EMAIL").val();
+
+        if (validateEmail(email)) {
+            var payload = {
+                "email": email
+            };
+            $.ajax({
+                type: "POST",
+                url: "https://immense-eyrie-7172.herokuapp.com/signup",
+                data: JSON.stringify(payload),
+                success: callback,
+                dataType: "json",
+                contentType: "application/json"
+            });
+        } else {
+            showError("Please enter a valid email address!");
         }
     });
 
@@ -110,4 +158,5 @@
     $(window).resize(function() {
         jsPlumb.repaintEverything();
     });
+
 })();
