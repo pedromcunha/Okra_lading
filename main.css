@@ -370,7 +370,7 @@ ul img {
 	}
 	.instructional li {
 		line-height: 46px;
-		font-size: 20px;
+		font-size: 16px;
 		position: static;
 	}
 
@@ -392,6 +392,12 @@ ul img {
 
 	#sectionOne, #sectionTwo, #sectionThree {
 		height: 100%;
+		padding-bottom: 20px;
+	}
+
+	#sectionThree {
+		height: 480px;
+		margin-bottom: -100px;
 	}
 
 	#sectionFour {
