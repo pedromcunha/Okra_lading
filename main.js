@@ -117,38 +117,38 @@
     });
 
     $(document).on('scroll', function() {
-        if ($(window).scrollTop() > 1300 && nodeAnimated === false) {
+        if ($(window).scrollTop() > 1250 && nodeAnimated === false) {
             setTimeout(function() {
                 $('.nodeTree').center();
                 $('#list1').center();
-            }, 1000);
+            }, 800);
             setTimeout(function() {
                 $('#row1').center();
                 $('#list2').center();
-            }, 2000);
+            }, 1500);
             setTimeout(function() {
                 $('#row2').center();
                 $('#list3').center();
-            }, 3000);
+            }, 2000);
             setTimeout(function() {
                 $('#row3').center();
                 $('#list4').center();
                 $('#list5').center();
-            }, 4000);
+            }, 2500);
 
             setTimeout(function() {
                 jsPlumb.connect({
                     source: "objective1",
                     target: "keyResult1"
                 });
-            }, 4300);
+            }, 3000);
 
             setTimeout(function() {
                 jsPlumb.connect({
                     source: "objective1",
                     target: "keyResult2"
                 });
-            }, 4500);
+            }, 3300);
 
             nodeAnimated = true;
         }
