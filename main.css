@@ -87,9 +87,9 @@ ul img {
 }
 
 .instructional {
-	height: 196px;
+	height: 180px;
 	width: 45%;
-	margin: 0 auto 4vh auto;
+	margin: 0 auto 3vh auto;
 	padding-bottom: 10px;
 	list-style-type: none;
 }
@@ -304,9 +304,9 @@ ul img {
     color: #99b742;
     font-weight: 700;
 }
-#canvas-path {
-    width: 100%;
-    height: 100%;
+
+.fa {
+	color: #99b742;
 }
 /* Utility */
 

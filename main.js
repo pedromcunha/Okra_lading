@@ -134,19 +134,23 @@
                 $('#row3').center();
                 $('#list4').center();
                 $('#list5').center();
+                jsPlumb.connect({
+                    source: "objective1",
+                    target: "keyResult1"
+                });
             }, 2500);
 
             setTimeout(function() {
                 jsPlumb.connect({
-                    source: "objective1",
-                    target: "keyResult1"
+                    source: "keyResult1",
+                    target: "task1"
                 });
             }, 3000);
 
             setTimeout(function() {
                 jsPlumb.connect({
-                    source: "objective1",
-                    target: "keyResult2"
+                    source: "keyResult1",
+                    target: "task2"
                 });
             }, 3300);
 
