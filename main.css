@@ -391,7 +391,7 @@ ul img {
 	}
 
 	#sectionOne, #sectionTwo, #sectionThree {
-		height: 375px;
+		height: 100%;
 	}
 
 	#sectionFour {
