@@ -80,8 +80,8 @@ ul img {
     width: 500px;
     height: 275px;
     border: 1px solid #99b742;
-    margin: 0 auto;
-    padding-top: 20px;
+    margin: 3vw auto 0 auto;
+    padding-top:2vh;
     position: absolute;
     left: 2000px;
 }
@@ -89,7 +89,7 @@ ul img {
 .instructional {
 	height: 196px;
 	width: 45%;
-	margin: 0 auto;
+	margin: 0 auto 4vh auto;
 	padding-bottom: 10px;
 	list-style-type: none;
 }
@@ -336,6 +336,9 @@ ul img {
 @media (max-width: 850px) {
     #mce-EMAIL {
         margin-top: 15px;
+    }
+    .instructional {
+        margin-bottom: 1vh;
     }
 }
 @media (max-width: 550px) {
