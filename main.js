@@ -121,15 +121,15 @@
             setTimeout(function() {
                 $('.nodeTree').center();
                 $('#list1').center();
-            }, 800);
+            }, 1100);
             setTimeout(function() {
                 $('#row1').center();
                 $('#list2').center();
-            }, 1500);
+            }, 2200);
             setTimeout(function() {
                 $('#row2').center();
                 $('#list3').center();
-            }, 2000);
+            }, 3000);
             setTimeout(function() {
                 $('#row3').center();
                 $('#list4').center();
@@ -138,21 +138,21 @@
                     source: "objective1",
                     target: "keyResult1"
                 });
-            }, 2500);
+            }, 3500);
 
             setTimeout(function() {
                 jsPlumb.connect({
                     source: "keyResult1",
                     target: "task1"
                 });
-            }, 3000);
+            }, 4000);
 
             setTimeout(function() {
                 jsPlumb.connect({
                     source: "keyResult1",
                     target: "task2"
                 });
-            }, 3300);
+            }, 4300);
 
             nodeAnimated = true;
         }
