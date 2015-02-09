@@ -47,13 +47,6 @@ h2 {
 	padding: 3%;
 }
 
-ul {
-	width: 45%;
-	margin: 0 auto;
-	padding-bottom: 10px;
-	list-style-type: none;
-}
-
 ul img {
 	width:2vw;
 	padding-right: 3vw;
@@ -68,6 +61,7 @@ ul img {
 	border-radius: 5px;
 	margin-right: 10px;
 	line-height: 60px;
+	position: relative;
 }
 
 .node-inactive {
@@ -82,6 +76,7 @@ ul img {
 
 .row img {
 	width: 450px;
+	margin-top: -10px;
 }
 
 .nodeTree {
@@ -92,6 +87,14 @@ ul img {
 	padding-top: 20px;
 	position: absolute;
 	left: 2000px;
+}
+
+.instructional {
+	height: 196px;
+	width: 45%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	list-style-type: none;
 }
 
 .instructional li {
