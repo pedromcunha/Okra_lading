@@ -55,6 +55,7 @@ ul img {
 	line-height: 60px;
 	position: relative;
 }
+
 .node-inactive {
     background-color: #c2c5c3;
 }
@@ -330,6 +331,15 @@ ul img {
     padding: 0;
     border: 0;
     cursor: pointer;
+}
+
+.nodeType {
+    position: absolute;
+    font-size: 12px;
+    top: -17px;
+    right: 8px;
+    color: #333333;
+    font-weight: bold;
 }
 /*Media Queries*/
 
