@@ -69,23 +69,23 @@
         function showError(msg) {
             $('#mce-EMAIL').css("border", "2px solid #E41E1E");
             $('#mce-EMAIL').css("outline", "none");
-            $('#errorMsg').css("display", "block");
-            $('#errorMsg').html(msg);
+            $('.errorMsg').css("display", "block");
+            $('.errorMsg').html(msg);
             setTimeout(function() {
-            	$('#errorMsg').fadeOut();
+            	$('.errorMsg').fadeOut();
             	$('#mce-EMAIL').css("border", "2px inset");
                 $('#mce-EMAIL').val("");
             }, 1550);
         }
 
         function showSuccess(msg) {
-            $('#successMsg').css("display", "block");
-            $('#successMsg').html(msg);
+            $('.successMsg').css("display", "block");
+            $('.successMsg').html(msg);
             setTimeout(function() {
                 closeModal();
             }, 1200);
             setTimeout(function() {
-                $('#successMsg').toggle();
+                $('.successMsg').toggle();
             }, 1800);
         }
 
