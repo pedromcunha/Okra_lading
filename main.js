@@ -8,7 +8,7 @@
             },
             EndpointStyle: {
                 fillStyle: "#99b742",
-                radius: 4
+                radius: 1
             },
             Connector: ["Bezier", {
                 curviness: 20
