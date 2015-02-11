@@ -83,10 +83,10 @@
             $('#successMsg').html(msg);
             setTimeout(function() {
                 closeModal();
-            }, 700);
+            }, 1200);
             setTimeout(function() {
                 $('#successMsg').toggle();
-            }, 900);
+            }, 1800);
         }
 
         function callback(data) {
@@ -97,7 +97,7 @@
             }
         }
 
-        var email = $("#mce-EMAIL").val();
+        var email = $(".mce-EMAIL").val();
 
         if (validateEmail(email)) {
             var payload = {

@@ -139,7 +139,7 @@ ul img {
     background-color: #474746;
     margin: 0 auto;
     width: 100%;
-    height: 7%;
+    height: 2%;
     text-align: center;
     position: relative;
     z-index: 100;
@@ -149,6 +149,13 @@ ul img {
     margin: 0;
     font-size: 15px;
     color: #939392;
+}
+#footer a {
+    text-decoration: none;
+    color: #c3c3c3;
+}
+#footer a:hover {
+    color: #99b742;
 }
 .bg-left {
     float: left;
@@ -188,6 +195,11 @@ ul img {
 .signup-btn.has-hover:hover, .mobile-signup-btn.has-hover:hover {
 	color: #99b742;
 }
+
+.has-other-hover:hover {
+    color:#000;
+}
+
 .next-btn .fa-angle-down {
     font-size: 38px;
 }
@@ -299,7 +311,7 @@ ul img {
     padding-top: 10px;
     width: 100%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 0 -9px;
     display: none;
     color: #99b742;
     font-weight: 700;
