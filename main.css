@@ -282,7 +282,7 @@ ul img {
     min-width: 90px;
     margin: 20px auto 0 auto;
 }
-#mc-embedded-subscribe {
+.mc-embedded-subscribe {
     border: 1px solid #99b742;
     padding: 5px 10px;
     font-size: 14px;
@@ -294,7 +294,7 @@ ul img {
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-#mc-embedded-subscribe:hover {
+.mc-embedded-subscribe:hover {
     color: #ffffff;
     background-color: #99b742;
     cursor: pointer;
@@ -375,7 +375,7 @@ ul img {
     }
 }
 @media (max-width: 850px) {
-    #mce-EMAIL {
+    .mce-EMAIL {
         margin-top: 15px;
     }
     .instructional {

@@ -25,7 +25,7 @@
         $('.modal-backdrop').fadeOut('fast');
         $('body').removeClass('no-scroll');
 
-        $('#mce-EMAIL').val("");
+        $('.mce-EMAIL').val("");
     }
 
     $('.next-btn').on('click', function() {
@@ -42,7 +42,7 @@
         $('.modal-backdrop').fadeIn('fast');
         $('body').addClass('no-scroll');
 
-        $("#mce-EMAIL").focus();
+        $(".mce-EMAIL").focus();
     });
 
     $('.close-modal, .modal-backdrop').on('click', closeModal);
@@ -65,16 +65,18 @@
         return re.test(email);
     }
 
-    $('#mc-embedded-subscribe').on('click', function() {
+    $('.mc-embedded-subscribe').on('click', function() {
+
         function showError(msg) {
-            $('#mce-EMAIL').css("border", "2px solid #E41E1E");
-            $('#mce-EMAIL').css("outline", "none");
+            $('.mce-EMAIL').css("border", "2px solid #E41E1E");
+            $('.mce-EMAIL').css("outline", "none");
             $('.errorMsg').css("display", "block");
             $('.errorMsg').html(msg);
             setTimeout(function() {
             	$('.errorMsg').fadeOut();
-            	$('#mce-EMAIL').css("border", "2px inset");
-                $('#mce-EMAIL').val("");
+            	$('.mce-EMAIL').css("border", "2px solid #99b742");
+                $('.mce-EMAIL').val("");
+                $(".mce-EMAIL").focus();
             }, 1550);
         }
 
@@ -97,8 +99,8 @@
             }
         }
 
-        var email = $(".mce-EMAIL").val();
-
+        var email = $(".reg-email").val() || $(".mobile-email").val();
+        console.log("email: ", email)
         if (validateEmail(email)) {
             var payload = {
                 "email": email
