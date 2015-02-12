@@ -70,8 +70,7 @@ ul img {
 
 .row {
     padding: 17px;
-    left: 2000px;
-    position: absolute;
+    display: none;
 }
 .row img {
 	width: 450px;
@@ -81,10 +80,9 @@ ul img {
     width: 500px;
     height: 275px;
     border: 1px solid #99b742;
-    margin: 3vw auto 0 auto;
+    margin: 0 auto;
     padding-top:2vh;
-    position: absolute;
-    left: 2000px;
+    display: none;
 }
 
 .instructional {
@@ -96,8 +94,7 @@ ul img {
 }
 
 .instructional li {
-    left: 2000px;
-    position: absolute;
+    display: none;
 }
 .blurb {
     width: 60%;

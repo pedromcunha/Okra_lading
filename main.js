@@ -47,19 +47,6 @@
 
     $('.close-modal, .modal-backdrop').on('click', closeModal);
 
-    $.fn.center = function() {
-        var left = ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px";
-        this.animate({
-            left: left
-        }, function() {
-            $(this).css({
-                position: 'static',
-                margin: '0 auto'
-            });
-        });
-        return this;
-    }
-
     function validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
@@ -121,40 +108,37 @@
     $(document).on('scroll', function() {
         if ($(window).scrollTop() > 1250 && nodeAnimated === false) {
             setTimeout(function() {
-                $('.nodeTree').center();
-                $('#list1').center();
-            }, 1100);
+                $('.nodeTree').fadeIn(1000);
+                $('#list1').fadeIn(1000);
+            }, 1000);
             setTimeout(function() {
-                $('#row1').center();
-                $('#list2').center();
+                $('#row1').fadeIn(1000);
+                $('#list2').fadeIn(1000);
             }, 2200);
             setTimeout(function() {
-                $('#row2').center();
-                $('#list3').center();
-            }, 3000);
+                $('#row2').fadeIn(1000);
+                $('#list3').fadeIn(1000);
+            }, 3200);
             setTimeout(function() {
-                $('#row3').center();
-                $('#list4').center();
-                $('#list5').center();
+                $('#row3').fadeIn(1000);
+                $('#list4').fadeIn(1000);
+                $('#list5').fadeIn(1000);
+            }, 4200);
+
+            setTimeout(function() {
                 jsPlumb.connect({
                     source: "objective1",
                     target: "keyResult1"
                 });
-            }, 3500);
-
-            setTimeout(function() {
                 jsPlumb.connect({
                     source: "keyResult1",
                     target: "task1"
                 });
-            }, 4000);
-
-            setTimeout(function() {
                 jsPlumb.connect({
                     source: "keyResult1",
                     target: "task2"
                 });
-            }, 4300);
+            }, 5000);
 
             nodeAnimated = true;
         }
